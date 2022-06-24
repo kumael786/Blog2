@@ -1,0 +1,78 @@
+---
+title: "Should Emerging Markets be viewed through ‘The Key Man’ Hypothesis or as regions of unmitigable risk?"
+description: |
+  Post 1
+author:
+  - name: Kumael Bilgrami
+date: 2022-06-23
+output:
+  distill::distill_article:
+    self_contained: false
+---
+•	Recently listening to Simon Clark and Will Louch’s book, ‘The Key Man: How the Global Elite Was Duped by a Capitalist Fairy Tale’, renewed my interest in how we view emerging markets (EMs) today, and more importantly, how we should approach their analysis in an optimistic, and yet measured way
+
+•	‘The Key Man’ focuses on the story of Arif Naqvi, former CEO and founder of Abraaj Capital, a superstar private equity firm that centred its operations and acquisitions in the developing world. Whilst it became a champion of the ‘impact investing’ movement, Naqvi’s dodgy dealings came to reside among the larger Ponzi schemes in history, leaving him facing a 300-year prison sentence
+
+•	Whilst the scandal is without a doubt important, Naqvi’s narrative which duped countless members of the global elite (most notably Bill Gates and his foundation), framed emerging markets and its entrepreneurship opportunities in a positive and vibrant light that would form the basis of how the inter-generational benefits, redistribution of wealth, and overall regional progress could be achieved in the future 
+
+•	Stripping away the political rhetoric, and approaching the topic from a strictly economic perspective, EMs are less well known for their corporate landscape and corresponding opportunities, and more for the problems within which they become mired. However, do we have to be so mutually exclusive in our analysis?
+
+•	Furthermore, just because Naqvi and his firm, who espoused the positive potential of EMs turned out to have committed major fraud, does this reduce the merit of EMs as spheres of opportunity? Given the trillion-dollar investment management industry has large interests as well as invested sums in the region, my initial answer would be no, but nevertheless, the analysis conducted should try and maintain an added level of rigour considering these issues.
+
+•	This is the true purpose of this blog (EM Lite). Each week I will try to address a contentious or politically charged topic affecting EMs, and attempt to unpick it from such elements, uncovering the underlying explanations and potential solutions
+
+•	Whilst the book, ‘The Key Man’ thematically represents the broader topic of EMs, this blog will focus on economic and econometric data analysis of various indicators, metrics and regions. Data is key in uncovering the true cause of developments in many settings, and a primary objective of this blog is to provide methodical analysis, interpretation, and easily digestible/user-friendly explanations of big issues facing EMs. As with any commentary on EMs, there is sure to be investment implications, however, the purpose of this blog is not to make specific recommendations, rather explore the broader environment and conditions.
+
+•	Also, to note, coming from a Pakistani background has meant the Pakistani economy has always fascinated me. The volatility and political element, however, have always meant that understanding the underlying story was always hard growing up. However, as my formal studies of Economics progressed, particularly with my recent stint (MSc Economics and Management) at The London School of Economics and Political Science, I have amassed a certain skill level/toolkit to be able to unpack more challenging topics through economic analysis. As such, Pakistan and its economy will be a recurring featurette of this blog. I will in time, also aim to publish the results and code of my MSc dissertation, which looked at exchange rate pass-through in Pakistan, and specifically how it can vary with levels of openness and the resulting impact on domestic consumer prices. 
+
+•	It is my hope therefore, to provide clarity and rigour when addressing various topics that impact EMs. I hope you enjoy reading this blog as much as I have had writing it, and I would kindly issue a disclaimer, that even though I am junior and at the start of my career, I will aim to provide a level of quality that is to the best of my ability. This is not a definitive blog on EMs, but you can view it as ‘a ‘lite’ version of an emerging markets commentary!
+
+**‘The Key Man’**
+
+I was recently travelling with a close colleague of mine on a road trip. He, like many others have been taken in by the trend towards audiobooks, and so he asked to resume a book he had previously been listening to. The book began by narrating the case study and history of K-electric, the Karachi-based/serving energy company; specifically, its acquisition and swift turnaround by (now defunct) Abraaj Capital. Given that this colleague has a lengthy history in private equity, I almost listened with a sigh as I thought this was another of his attempts at convincing me of the strength and security afforded by Smith’s so-called ‘invisible hand’ (via financial intermediaries).  However, as the chapters went by, and I learnt of the now infamous Abraaj fraud scandal that has founder Arif Naqvi facing up to 300 years in prison, I was taken aback. 
+
+Primarily, I was taken aback at how Naqvi, the apparent new face of ‘impact investing’ (investing that seeks to provide socially/environmentally beneficial outcomes in addition to financial return) in EMs, who stood for the importance of social good and ethical standards could act in that opposite of a manner. However, what really captured my interest, was Naqvi’s rhetoric and treatment of EMs. Almost in defiance to the racism he experienced early on, Naqvi seemed to favour EMs over all other investment avenues; so much so that he refused to call them emerging markets, instead ‘global growth markets’! Abstracting from the scandal and the politically charged rhetoric, the point being, how should we approach emerging markets? Should we throw caution to the wind as Naqvi did, and disregard the challenges of EM in investing/our analysis? I should think not. However, just because Naqvi was morally reprehensible and personally responsible for misrepresenting his investments and positions in EMs, does not mean that EMs have no value. 
+
+What then, are ‘emerging markets’? And before this blog begins to present analysis in subsequent posts, what are the greatest challenges facing EMs?
+
+Emerging markets are developing regions of the world that are in the process of transitioning from traditional agricultural economies to the service-sector style economy that characterises the ‘so-called’ First World. It is widely accepted that emerging markets have some but not all characteristics of developed economies. EMs span broad regions of the globe and some of the most well-known include the BRICs (Brazil, Russia, India, China) as well as, Mexico, Pakistan, Egypt, South Africa, Thailand, Korea etc. Individual investors will find that they cannot gain much exposure to EMs directly and will only be able to do so through specific ETFs offered by larger funds e.g., Morgan Stanley’s MSCI-EM Index. Interestingly, closer inspection at the MSCI-EM index shows just how drastically the fund (and its classification of emerging markets) has evolved since inception (in 1988). 
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/MSCIEM 1988.png")
+```
+![MSCI-EM Index 1988](/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/MSCIEM 1988.png)
+
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/MSCIEM 2020.png")
+```
+![MSCI-EM Index 2020](/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/MSCIEM 2020.png)
+Not only have the constituents of the MSCI-EM Index changed (with only India and Brazil remaining in the top 5 countries between 1994 and 2020), but perhaps the greatest visible development is the catapult of China to the top of EMs making up 40% of EMs GDP. Given such developments, we have now seen further classifications with the establishment of ‘frontier markets’ in recent years; denoting countries that are not among the least economically developed but still too small or ‘risky’ to be considered EMs (e.g., Bahrain, Bangladesh and large portions of Africa). 
+
+Considering current global economic conditions, developed economies are arguably on course for a downswing trajectory driven by the wave of aggressive central bank tightening. In such a scenario, what therefore are the implications for EMs? Do they even stand a chance?
+
+Superficially, it may be interesting to inspect how the market views EMs before elaborating on the more underlying economic problems. Very plainly, demand for EM assets and therefore part of their inflows is determined by the overall level of global liquidity. In good times, investors have more cash and (arguably) higher risk tolerance and so are willing to invest. However, when ‘safe assets’ such as Treasuries experience turbulent times (as the currently widening yields on 10-year Treasuries indicate), more ‘risky’ assets and avenues (e.g., EMs) will experience even more turbulent times. Indeed, this is the trend we have seen; EPFR Global tracks that institutional investors have dumped around $40bn of EM bonds. The benchmark index explored above; MSCI-EM is also down roughly 20%. However, currency denomination of such assets may be a factor that limits the extent to which the market ‘prices up the riskiness’ of EM assets.
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics("/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/FT MSCI-EM.png")
+```
+![FT MSCI-EM Index Performance](/Users/kumaelbilgrami/Documents/R Studio/EM Lite Blog/Images/FT MSCI-EM.png)
+Looking at the more fundamental economic situation, emerging Europe has experienced healthy post-pandemic recoveries whilst emerging Asia was relatively less disrupted in the first place. Despite this, emerging Europe is now subject to the ‘one-size-fits-all’ policy of the ECB which has turned contractionary indicating future slowdowns. Latin America has been experiencing similar conditions, mainly due to the nature and makeup of its headline inflation. Both food and fuel prices have been steadily rising over the last year, driving the change. However, Asia has had relatively lower food price inflation and so its headline rates are not as much of a worry. Core inflation in the region is still on the upward trajectory, and so central banks will likely begin tightening in the near future, but nowhere near as aggressively as the rest of EM or developed economies. Pakistan and Sri Lanka are the outliers in this respect, as both are experiencing tougher conditions more in line with the dire circumstances of the wider global economy. 
+
+Are EM’s therefore as vulnerable as they once were? If we look at several indicators, the answer may interestingly be no. Commenting very broadly (future posts will look at such measures more in depth), vulnerability seems to have fallen in recent years. There are fewer currency pegs and cases of large current account deficits. Additionally, there is less exposure to hard currency debt (EM debt issued in USD) and bigger foreign exchange reserves. There may also be a sense that commodity prices may fall by less than recent years, boosting EM dollar-related earnings. As such, the situation may not be as bleak as initially thought. 
+
+However, in line with this broader outlook, the World Bank has still revised its growth target for EMs downward, predicting more widespread slowdowns outside of China. This is likely because the tightening cycles we see in the advanced world are perhaps the most aggressive we have seen in decades, and as such, reverberations will undoubtedly be felt around the globe. Furthermore, certain EM regions are having trouble in balancing fiscal sustainability and credible monetary policy. Pakistan in particular, is facing uncontrollable supply-driven inflation, high debt levels, and yet stringent fiscal guidelines imposed by the IMF in exchange for a $6bn loan (that is yet to be unlocked). Cases such as these are impacting the poorest citizens the most, and as such, EMs will experience future challenges in providing relief for its most vulnerable populations.  
+
+Whilst less vulnerable than recent years, emerging markets still face significant challenges that are both related to internal and external economic conditions. Opportunities will exist regardless, but the gravity of the overall situation should not be overlooked.
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
